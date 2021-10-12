@@ -19,8 +19,5 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.group(() => {
-    Route.get('listar', () => {})
-    Route.post('guardar', () => {})
-    Route.put('actualizar', () => {})
-    Route.delete('borrar', () => {})
-  }).prefix('api/productos')
+    Route.resource('productos', 'ProductoController')
+  }).prefix('api')
